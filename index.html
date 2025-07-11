@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Satish ❤️ Revathi</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <audio autoplay loop>
+    <source src="bg.mp3" type="audio/mpeg" />
+    Your browser does not support the audio element.
+  </audio>
+
+  <div class="container">
+    <h2 class="names">Satish ❤️ Revathi</h2>
+    <div class="scene">
+      <div class="boy"></div>
+      <div class="heart">&#10084;</div>
+      <div class="girl"></div>
+    </div>
+    <h1 class="proposal-text">Revathi, Will You Marry Me?</h1>
+    <button class="yes-btn" onclick="showLove()">YES ❤️</button>
+  </div>
+<!-- Add your image below the button -->
+<!-- Example: Add a decorative image or photo here -->
+<div class="photo-container">
+      <img src="couple.jpg" alt="Satish and Revathi" class="couple-photo">
+    </div>
+
+  <div id="message" class="hidden">Satish will love you forever, Revathi 💍</div>
+
+  <script src="script.js"></script>
+  <script>
+    function showLove() {
+      document.getElementById('message').classList.remove('hidden');
+      document.querySelector('audio').play();
+    }
+  </script>
+</body>
+</html>
+<style>
+
+  body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to top, #1c1c1c, #ff4081);
+  font-family: 'Arial', sans-serif;
+  color: white;
+  text-align: center;
+}
+
+.container {
+  margin-top: 50px;
+}
+
+.names {
+  font-size: 1.8rem;
+  color: #ffe0e0;
+}
+
+.scene {
+  position: relative;
+  width: 100%;
+  height: 300px;
+}
+
+.boy {
+  width: 60px;
+  height: 120px;
+  background: #3498db;
+  position: absolute;
+  left: 30%;
+  bottom: 0;
+  border-radius: 10px;
+  transform: rotate(-15deg);
+  animation: kneel 2s forwards;
+}
+
+.girl {
+  width: 60px;
+  height: 140px;
+  background: #e91e63;
+  position: absolute;
+  right: 30%;
+  bottom: 0;
+  border-radius: 10px;
+}
+
+.heart {
+  font-size: 50px;
+  position: absolute;
+  left: 45%;
+  top: 100px;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes kneel {
+  0% { bottom: 0; transform: rotate(0); }
+  100% { bottom: 0; transform: rotate(-30deg); }
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.2); color: red; }
+}
+
+.proposal-text {
+  font-size: 2.5rem;
+  margin-top: 20px;
+}
+
+.yes-btn {
+  padding: 12px 25px;
+  font-size: 1.3rem;
+  background-color: #e91e63;
+  border: none;
+  border-radius: 25px;
+  color: white;
+  cursor: pointer;
+  margin-top: 20px;
+  box-shadow: 0 0 10px #ffebee;
+}
+
+#message {
+  margin-top: 30px;
+  font-size: 2rem;
+  animation: fadeIn 2s forwards;
+}
+
+.hidden {
+  display: none;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; color: #f1c40f; }
+}
